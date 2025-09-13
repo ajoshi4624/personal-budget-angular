@@ -3,13 +3,15 @@
 }
 
 body {
-    font-size: 10px;
-    font-family: Tahoma, Arial;
+    font-size: 16px; /* larger default font size */
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif; /* cleaner font */
+    color: #111;
+    line-height: 1.6;
 }
 
 nav {
     width: 100%;
-    background-color: #4d5791;
+    background-color: #4682b4; /* light blue nav */
     height: 44px;
     padding: 0 40px;
 }
@@ -17,7 +19,7 @@ nav {
 nav ul,
 nav ul li {
     margin: 0;
-    padding: 0 ;
+    padding: 0;
     list-style: none;
     display: inline-block;
 }
@@ -26,57 +28,63 @@ nav ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
-    font-size: 1.4em;
+    font-size: 1.1rem;
     text-decoration: none;
     color: #fff;
     margin: 0;
 }
 
-nav ul li a:hover  {
-    background-color: white;
-    color: #4d5791;
+nav ul li a:hover {
+    background-color: #5a9bd6; /* lighter blue hover */
+    color: #fff;
 }
 
 div.hero {
     height: 350px;
-    background-color: #b4c6f0;
+    background-color: #b3cde0; /* light blue hero background */
     background-image: url('bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
-    padding-top: 40px;
-}
-
-div.hero h1,
-div.hero h2 {
+    padding-top: 60px;
     text-align: center;
-    margin: 0;
 }
 
 div.hero h1 {
     color: #fff;
-    font-size: 4.2em;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 10px;
+    border: none; /* remove weird underline */
+    font-weight: bold;
 }
 
-div.hero h2 {
-    color: #4d5791;
+div.hero h2,
+div.hero .tagline {
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 10px;
 }
 
 main {
-    padding: 40px;
+    padding: 40px 20px;
     width: 100%;
 }
 
 .page-area {
-    max-width: 768px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 footer {
     height: 50px;
-    background-color: #b4c6f0;
+    background-color: #b3cde0; /* light blue footer */
     padding: 40px;
+    text-align: center;
 }
 
 .skip {
@@ -95,11 +103,22 @@ footer {
 }
 
 main article {
-    display: inline-block;
-    width: 100%;
-    max-width: 340px;
-    text-align: justify;
-    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+main article h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+main article p {
+    font-size: 1rem;
+    color: #333;
 }
 
 @media screen and (min-width: 768px) {
