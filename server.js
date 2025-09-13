@@ -1,26 +1,12 @@
 const express = require('express');
+const fs = require('fs');
+const path = require('path');
 const app = express();
 const port = 3000;
 
 app.use('/', express.static('public'));
 
-const budget = {
-    myBudget: [
-    {
-        title: 'Eat out',
-        budget: 25
-    },
-    {
-        title: 'Rent',
-        budget: 375
-    },
-    {
-        title: 'Grocery',
-        budget: 110
-    },
-
-  ]
-};
+const budgetPath = path.join(__dirname, 'budget.json');
 
 
 app.get('/hello', (req, res) => {
@@ -28,7 +14,12 @@ app.get('/hello', (req, res) => {
 });
 
 app.get('/budget', (req, res) => {
-    res.json(budget);
+  fs.readFile(budgetPath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to load budget.json' });
+    }
+    res.json(JSON.parse(data));
+  });
 });
 
 app.listen(port, () => {

@@ -128,19 +128,22 @@
 
 <script>
     var dataSource = {
-        datasets: [
-            {
-                data: [],
-                backgroundColor: [
-                    '#ffcd56',
-                    '#ff6384',
-                    '#36a2eb',
-                    '#fd6b19',
-                ]
-            }
-        ],
-        labels: []
-    };
+  datasets: [{
+    data: [],
+    backgroundColor: [
+      '#ffcd56', 
+      '#ff6384', 
+      '#36a2eb', 
+      '#fd6b19', 
+      '#8dd3c7', 
+      '#80b1d3', 
+      '#b3de69'  
+    ],
+    borderColor: '#ffffff',
+    borderWidth: 2
+  }],
+  labels: []
+};
 
     function createChart() {
         var ctx = document.getElementById('myChart').getContext('2d');
