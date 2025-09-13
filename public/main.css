@@ -3,15 +3,15 @@
 }
 
 body {
-    font-size: 16px; /* larger default font size */
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif; /* cleaner font */
+    font-size: 16px; 
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif; 
     color: #111;
     line-height: 1.6;
 }
 
 nav {
     width: 100%;
-    background-color: #4682b4; /* light blue nav */
+    background-color: #4682b4; 
     height: 44px;
     padding: 0 40px;
 }
@@ -35,13 +35,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #5a9bd6; /* lighter blue hover */
+    background-color: #5a9bd6; 
     color: #fff;
 }
 
 div.hero {
     height: 350px;
-    background-color: #b3cde0; /* light blue hero background */
+    background-color: #b3cde0; 
     background-image: url('bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ div.hero h1 {
     font-size: 3rem;
     margin: 0;
     margin-bottom: 10px;
-    border: none; /* remove weird underline */
+    border: none; /
     font-weight: bold;
 }
 
@@ -75,14 +75,14 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     font-size: 1.1rem;
 }
 
 footer {
     height: 50px;
-    background-color: #b3cde0; /* light blue footer */
+    background-color: #b3cde0; 
     padding: 40px;
     text-align: center;
 }
@@ -125,4 +125,95 @@ main article p {
     main article {
         margin: 10px;
     }
+}
+
+.donut-svg {
+  max-width: 420px;   
+  width: 100%;        
+  height: auto;       
+  display: block;
+  margin: 0 auto;     
+}
+
+#myChart {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;  
+  gap: 32px;
+  margin-top: 32px;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, minmax(480px, 1fr)); 
+    align-items: stretch; 
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 28px;
+  text-align: center;
+  min-width: 420px;  
+}
+
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.chart-canvas,
+.donut-svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;   
+  aspect-ratio: 1 / 1; 
+  margin: 0 auto;    
+}
+
+.chart-canvas {
+  height: auto !important;
+}
+
+#d3-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: center;
+  margin: 4px 0 12px;
+}
+
+#d3-legend div {
+  min-width: 140px;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+#d3-donut {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 420px;   
+  margin: 0 auto;
+}
+
+.chart-canvas, #myChart {
+  width: 100% !important;
+  height: 100% !important; 
+  display: block;
 }

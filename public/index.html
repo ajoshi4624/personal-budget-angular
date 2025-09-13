@@ -1,172 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- This is an SEO Change-->
     <title>Personal Budget — Free Budgeting App to Track Spending</title>
 
     <!-- This is an SEO Change-->
-    <meta name="description" content="Personal Budget is a free budgeting app that helps you track spending, set alerts, and visualize results with clear charts.">
+    <meta
+      name="description"
+      content="Personal Budget is a free budgeting app that helps you track spending, set alerts, and visualize results with clear charts."
+    />
 
     <!-- This is an SEO Change-->
-    <link rel="canonical" href="https://example.com/">
+    <link rel="canonical" href="https://example.com/" />
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
 
     <!-- This is an A11y Change-->
     <style>
-      .skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
-      .skip:focus { position:static; width:auto; height:auto; padding:.5rem; background:#eee; }
-      .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        background: #eee;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
     </style>
 
     <!-- This is an SEO Change-->
-    <meta property="og:title" content="Personal Budget — Free Budgeting App">
-    <meta property="og:description" content="Track your spending, set alerts, and see your results.">
-</head>
-<body>
+    <meta property="og:title" content="Personal Budget — Free Budgeting App" />
+    <meta
+      property="og:description"
+      content="Track your spending, set alerts, and see your results."
+    />
+  </head>
+  <body>
+    <!-- This is an A11y Change-->
+    <a href="#main" class="skip">Skip to main content</a>
 
-<!-- This is an A11y Change-->
-<a href="#main" class="skip">Skip to main content</a>
-
-<!-- This is a Semantic HTML Change-->
-<header class="site-header">
-
-  <!-- This is an A11y Change-->
-  <nav aria-label="Primary navigation">
-      <ul>
+    <!-- This is a Semantic HTML Change-->
+    <header class="site-header">
+      <!-- This is an A11y Change-->
+      <nav aria-label="Primary navigation">
+        <ul>
           <!-- This is an A11y Change-->
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About</a></li>
           <li><a href="/login.html">Login</a></li>
           <!-- This is an A11y Change-->
-          <li><a href="https://google.com" target="_blank" rel="noopener noreferrer" aria-label="Open Google in a new tab">Google Search</a></li>
-      </ul>
-  </nav>
+          <li>
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Google in a new tab"
+              >Google Search</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-  <!-- This is a Semantic HTML Change-->
-  <div class="hero" role="banner">
-      <!-- This is an A11y Change-->
-      <h1>Personal Budget</h1>
-      <p class="tagline">A personal-budget management app</p>
-  </div>
-</header>
-
-<!-- This is a Semantic HTML Change-->
-<main class="center" id="main">
+      <!-- This is a Semantic HTML Change-->
+      <div class="hero" role="banner">
+        <!-- This is an A11y Change-->
+        <h1>Personal Budget</h1>
+        <p class="tagline">A personal-budget management app</p>
+      </div>
+    </header>
 
     <!-- This is a Semantic HTML Change-->
-    <section class="page-area">
-
+    <main class="center" id="main">
+      <!-- This is a Semantic HTML Change-->
+      <section class="page-area">
         <!-- This is a Semantic HTML Change-->
         <article>
-            <h2>Stay on track</h2>
-            <p>
-                Do you know where you are spending your money? If you really stop to track it,
-                you might be surprised! Proper budget management depends on real data — and this
-                app will help you with that!
-            </p>
-        </article>
-
-        <!-- This is a Semantic HTML Change-->
-        <article>
-            <h2>Alerts</h2>
-            <p>
-                What if your clothing budget ends? You’ll get an alert. The goal is to never go over budget.
-            </p>
-        </article>
-
-        <!-- This is a Semantic HTML Change-->
-        <article>
-            <h2>Results</h2>
-            <p>
-                People who stick to a financial plan, budgeting every expense, get out of debt faster.
-                They also tend to live happier lives because they spend without guilt or fear —
-                everything is accounted for.
-            </p>
-        </article>
-
-        <!-- This is a Semantic HTML Change-->
-        <article>
-            <h2>Free</h2>
-            <p>
-                <canvas id="myChart" width="400" height="400"></canvas>
-            </p>
-        </article>
-
-        <!-- This is an A11y Change-->
-        <figure>
-          <!-- This is an A11y Change-->
-          <p id="chart-desc" class="sr-only">
-            Pie chart showing the distribution of your budget categories.
+          <h2>Stay on track</h2>
+          <p>
+            Do you know where you are spending your money? If you really stop to
+            track it, you might be surprised! Proper budget management depends
+            on real data — and this app will help you with that!
           </p>
+        </article>
 
-          <!-- This is an A11y Change-->
-          <canvas id="myChart" width="400" height="400" aria-describedby="chart-desc"></canvas>
+        <!-- This is a Semantic HTML Change-->
+        <article>
+          <h2>Alerts</h2>
+          <p>
+            What if your clothing budget ends? You’ll get an alert. The goal is
+            to never go over budget.
+          </p>
+        </article>
 
-          <!-- This is an A11y Change-->
-          <figcaption>Budget distribution by category</figcaption>
-        </figure>
+        <!-- This is a Semantic HTML Change-->
+        <article>
+          <h2>Results</h2>
+          <p>
+            People who stick to a financial plan, budgeting every expense, get
+            out of debt faster. They also tend to live happier lives because
+            they spend without guilt or fear — everything is accounted for.
+          </p>
+        </article>
 
-    </section>
+        <section class="charts-grid">
+          <!-- Chart.js card -->
+          <article class="card">
+            <h2>Budget (Chart.js)</h2>
+            <div class="chart-wrap">
+              <canvas id="myChart"></canvas>
+            </div>
+          </article>
 
-</main>
+          <!-- D3 card -->
+          <article class="card">
+            <h2>Budget (D3 Donut)</h2>
+            <div id="d3-legend"></div>
+            <div class="chart-wrap">
+              <svg id="d3-donut"></svg>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
 
-<!-- This is a Semantic HTML Change-->
-<footer class="bottom" role="contentinfo">
-    <div class="center">
+    <!-- This is a Semantic HTML Change-->
+    <footer class="bottom" role="contentinfo">
+      <div class="center">
         <small>All rights reserved &copy; Fabio Nolasco</small>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<!-- This is an SEO/A11y Change-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <!-- This is an SEO/A11y Change-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+      integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
-<script>
-    var dataSource = {
-  datasets: [{
-    data: [],
-    backgroundColor: [
-      '#ffcd56', 
-      '#ff6384', 
-      '#36a2eb', 
-      '#fd6b19', 
-      '#8dd3c7', 
-      '#80b1d3', 
-      '#b3de69'  
-    ],
-    borderColor: '#ffffff',
-    borderWidth: 2
-  }],
-  labels: []
-};
+    <script>
+      function makeColors(n) {
+        const base = [
+          "#ffcd56",
+          "#ff6384",
+          "#36a2eb",
+          "#fd6b19",
+          "#8dd3c7",
+          "#80b1d3",
+          "#b3de69",
+          "#fccde5",
+          "#bc80bd",
+          "#ccebc5",
+        ];
+        return Array.from({ length: n }, (_, i) => base[i % base.length]);
+      }
 
-    function createChart() {
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myPieChart = new Chart(ctx, {
-            type: 'pie',
-            data: dataSource
+      /* ✅ define dataSource BEFORE createChart() */
+      var dataSource = {
+        datasets: [
+          {
+            data: [],
+            backgroundColor: [],
+            borderColor: "#ffffff",
+            borderWidth: 2,
+          },
+        ],
+        labels: [],
+      };
+
+      /* Chart.js */
+      var chart;
+      function createChart() {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        if (chart) chart.destroy();
+        chart = new Chart(ctx, {
+          type: "pie",
+          data: dataSource,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false, // use wrapper height
+            legend: { position: "bottom" },
+            layout: { padding: { top: 8, right: 8, bottom: 8, left: 8 } },
+          },
         });
-    }
+      }
 
-    function getBudget() {
-        axios.get('/budget')
-        .then(function (res) {
-            console.log(res.dataSource);
-            for (var i = 0; i < res.data.myBudget.length; i++) {
-                dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                dataSource.labels[i] = res.data.myBudget[i].title;
-            }
+      /* D3 donut — measure the WRAPPER, not the SVG */
+      function renderD3Donut(items) {
+        const svg = d3.select("#d3-donut");
+        const wrap = svg.node().parentElement; // .chart-wrap
+        const side = Math.min(wrap.clientWidth, wrap.clientHeight) || 420;
+        const radius = side / 2;
+
+        svg.selectAll("*").remove();
+        svg
+          .attr("viewBox", `0 0 ${side} ${side}`)
+          .attr("preserveAspectRatio", "xMidYMid meet");
+
+        const g = svg
+          .append("g")
+          .attr("transform", `translate(${side / 2},${side / 2})`);
+
+        const color = d3
+          .scaleOrdinal()
+          .domain(items.map((d) => d.title))
+          .range(makeColors(items.length));
+
+        const pie = d3
+          .pie()
+          .sort(null)
+          .value((d) => d.budget);
+        const arc = d3
+          .arc()
+          .innerRadius(radius * 0.55)
+          .outerRadius(radius * 0.95);
+
+        g.selectAll("path")
+          .data(pie(items))
+          .enter()
+          .append("path")
+          .attr("fill", (d) => color(d.data.title))
+          .attr("d", arc)
+          .append("title")
+          .text((d) => `${d.data.title}: ${d.data.budget}`);
+
+        const legend = d3.select("#d3-legend");
+        legend
+          .selectAll("div")
+          .data(items)
+          .join("div")
+          .html(
+            (d) => `
+        <span style="display:inline-block;width:14px;height:10px;background:${color(
+          d.title
+        )};margin-right:6px;vertical-align:middle;"></span>
+        <span>${d.title}</span>
+      `
+          );
+      }
+
+      /* One fetch → both charts */
+      function getBudget() {
+        axios
+          .get("/budget")
+          .then(function (res) {
+            const items =
+              res.data && res.data.myBudget ? res.data.myBudget : [];
+            console.log("items:", items);
+
+            dataSource.labels = items.map((x) => x.title);
+            dataSource.datasets[0].data = items.map((x) => x.budget);
+            dataSource.datasets[0].backgroundColor = makeColors(items.length);
+
             createChart();
-        });
-    }
-    getBudget();
-    
-</script>
+            renderD3Donut(items);
+          })
+          .catch(function (err) {
+            console.error("GET /budget failed:", err);
+          });
+      }
 
-</body>
+      getBudget();
+    </script>
+  </body>
 </html>
