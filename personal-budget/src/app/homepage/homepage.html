@@ -1,0 +1,39 @@
+<main class="center" id="main">
+  <pb-breadcrumbs></pb-breadcrumbs>
+  <!-- This is a Semantic HTML Change-->
+  <section class="page-area">
+    <!-- This is a Semantic HTML Change-->
+    <pb-article
+      title="Stay on track"
+      content="Do you know where you are spending your money? If you really stop to track it, you might be surprised! Proper budget management depends on real data — and this app will help you with that!"
+    >
+    </pb-article>
+
+    <pb-article
+      title="Alerts"
+      content="What if your clothing budget ends? You’ll get an alert. The goal is to never go over budget."
+    >
+    </pb-article>
+
+    <pb-article
+      title="Results"
+      content="People who stick to a financial plan, budgeting every expense, get out of debt faster. They also tend to live happier lives because they spend without guilt or fear — everything is accounted for."
+    >
+    </pb-article>
+  </section>
+  <section class="charts-grid">
+  <article class="card">
+    <h2>Budget (Chart.js)</h2>
+    <div class="chart-wrap">
+      <pb-chartjs-budget *ngIf="budgetItems.length" [items]="budgetItems"></pb-chartjs-budget>
+    </div>
+  </article>
+
+  <article class="card">
+    <h2>Budget (D3 Donut)</h2>
+    <div class="chart-wrap">
+      <pb-d3-donut       *ngIf="budgetItems.length" [items]="budgetItems"></pb-d3-donut>
+    </div>
+  </article>
+</section>
+</main>
